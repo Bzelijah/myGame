@@ -1,0 +1,12 @@
+.theme__container{
+  display: flex;
+  height: 10rem;
+}
+ .theme__title{
+  border: 1px solid black;
+   background: aqua;
+ }
+ .theme__question{
+  border: 1px solid black;
+   background: aqua;
+ }
