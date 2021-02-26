@@ -6,13 +6,9 @@ const Theme = () => {
   return (
     <div>
       <ul>
-        {
-          themes.map(el =>
-            <li>
-              <h5>{el.theme}</h5>
-              <p>{el.question}</p>
-            </li>
-          )}
+        <li>
+          <p>dsadasd</p>
+        </li>
       </ul>
     </div>
   );

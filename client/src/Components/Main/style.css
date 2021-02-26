@@ -1,0 +1,15 @@
+.card {
+  width: 200px;
+  height: 100px;
+}
+
+.game {
+  width: 200px;
+  height: 100px;
+}
+
+.profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
