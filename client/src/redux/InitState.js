@@ -20,11 +20,11 @@ const initState = {
       },
     ],
   }],
-  users: {
+  users: [{
     login: 'Igor',
     password: 'tapac',
     points: 0,
-  }
+  }]
 }
 
 

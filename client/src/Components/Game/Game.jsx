@@ -1,32 +1,31 @@
-import Theme from '../Theme/Theme';
 import { useSelector } from 'react-redux';
+import './Game.css';
+import Question from '../Question/Question';
+import Theme from '../Theme/Theme';
+import { useState } from 'react';
+import AskedQuestion from '../AskedQuestion/AskedQuestion'
 const Game = () => {
   const themes = useSelector(state => state.game);
-
-  const handlerClick = (e)=>{
+  const [show, setShow] = useState(false);
+  const [questionId, setQuestionId] = useState(null);
+  
+  const handlerClick = (e) => {
     console.log(e.target.id);
+    setShow(prev => !prev);
+    setQuestionId(e.target.id);
   }
 
   return (
-    <div className="container w-100">
-      {themes.map(el => {
-        return (
-          <div key={el.id} className="row ">
-            <div className="col-sm-3 theme__title">
-              {el.theme}
-            </div>
-            {el.questions.map(question => {
-              return (
-                <div key={question.id} id={question.id} className="col-sm theme__question" onClick={handlerClick}>
-                  {question.points}
-                </div>
-              )
-            })}
-          </div>
-        )
-      })
-      }
-    </div>
+    show ?
+      <div>
+        <AskedQuestion questionId={questionId}/>
+      </div >
+      :
+      <div className="container w-100">
+        {themes.map(el =>
+          <Theme key={el.id} theme={el} handlerClick={handlerClick} />
+        )}
+      </div>
   );
 }
 

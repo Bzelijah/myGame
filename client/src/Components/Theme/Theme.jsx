@@ -1,47 +1,19 @@
-// import './Theme.css';
+import Question from '../Question/Question'
 
-// const Theme = () => {
-//   return (
-//     <div class="container w-100">
-//   <div class="row ">
-//     <div class="col-sm-3 theme__title">
-//       Одна из трёх колонок
-//     </div>
-//     <div class="col-sm theme__question">
-//       Одна из трёх колонок
-//     </div>
-//     <div class="col-sm theme__question">
-//       Одна из трёх колонок
-//     </div>
-//     <div class="col-sm theme__question">
-//       Одна из трёх колонок
-//     </div>
-//     <div class="col-sm theme__question">
-//       Одна из трёх колонок
-//     </div>
-//     <div class="col-sm theme__question">
-//       Одна из трёх колонок
-//     </div>
-//   </div>
-// </div>
-// import { useSelector, useDispatch } from 'react-redux';
+const Theme = (props) => {
+  const { theme, handlerClick } = props
+  console.log(theme);
+  console.log(handlerClick);
+  return (
+    <div key={theme.id} className="row ">
+      <div className="col-sm-3 theme__title">
+        {theme.theme}
+      </div>
+      {theme.questions.map(question =>
+        <Question key={question.id} question={question} handlerClick={handlerClick} />
+      )}
+    </div>
+  );
+}
 
-// const Theme = () => {
-//   const themes = useSelector(state => state.game);
-//   console.log(themes)
-//   return (
-//     <div>
-//       <ul>
-//         {
-//           themes.map(el =>
-//             <li>
-//               <h5>{el.theme}</h5>
-//               <p>{el.question}</p>
-//             </li>
-//           )}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default Theme;
+export default Theme;
