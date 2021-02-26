@@ -1,0 +1,11 @@
+ .theme__title{
+   width: 150px;
+   background: burlywood;
+margin: 3px;
+
+  }
+  .theme__question{
+    border: 1px solid black;
+margin: 3px;
+    background: rgb(137, 228, 119);
+ }

@@ -1,5 +1,5 @@
+import Game from './Components/Game/Game';
 import './App.css';
-import Theme from './Components/Theme/Theme';
 import Main from './Components/Main/Main.jsx';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
@@ -14,7 +14,7 @@ function App() {
             <Main />
           </Route>
           <Route exact path="/game">
-            <Theme />
+            <Game />
           </Route>
         </Switch>
       </Router>
