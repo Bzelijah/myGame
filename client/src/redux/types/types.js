@@ -1,4 +1,4 @@
-export const SHOW_QUESTIONS = 'SHOW_QUESTIONS';
+export const CHANGE_STATUS = 'CHANGE_STATUS';
 export const SELECT_QUESTION = 'SELECT_QUESTION';
 export const ADD_POINTS = 'ADD_POINTS';
 

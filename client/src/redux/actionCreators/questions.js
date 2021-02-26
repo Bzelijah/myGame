@@ -1,8 +1,9 @@
 import * as TYPES from '../types/types';
 
-export function showQuestions() {
+export function showQuestions(id) {
   return {
-    type: TYPES.SHOW_QUESTIONS,
+    type: TYPES.CHANGE_STATUS,
+    data: String(id)
   }
 };
 
