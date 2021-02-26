@@ -8,22 +8,26 @@ const Game = () => {
   const themes = useSelector(state => state.game);
   const [show, setShow] = useState(false);
   const [questionId, setQuestionId] = useState(null);
-  
-  const handlerClick = (e) => {
-    console.log(e.target.id);
+
+  const handlerClick = (id) => {
+    console.log('handlerClick====>', id);
     setShow(prev => !prev);
-    setQuestionId(e.target.id);
+    setQuestionId(id);
   }
 
   return (
     show ?
       <div>
-        <AskedQuestion questionId={questionId}/>
+        show ={show ? 'TRUE' : 'FALSE'}
+        questionId ={questionId}
+
+
+        <AskedQuestion questionId={questionId} setShow={setShow} />
       </div >
       :
       <div className="container w-100">
         {themes.map(el =>
-          <Theme key={el.id} theme={el} handlerClick={handlerClick} />
+          <Theme key={el.id} theme={el} handlerClick={(e) => handlerClick(e.target.id)} />
         )}
       </div>
   );

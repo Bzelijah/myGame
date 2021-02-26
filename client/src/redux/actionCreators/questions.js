@@ -1,9 +1,9 @@
 import * as TYPES from '../types/types';
 
-export function showQuestions(id) {
+export function changeStatus(themeId, questionId) {
   return {
     type: TYPES.CHANGE_STATUS,
-    data: String(id)
+    data: {themeId: String(themeId), questionId: String(questionId) }
   }
 };
 

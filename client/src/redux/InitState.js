@@ -21,6 +21,7 @@ const initState = {
     ],
   }],
   users: [{
+    id: 1,
     login: 'Igor',
     password: 'tapac',
     points: 0,
