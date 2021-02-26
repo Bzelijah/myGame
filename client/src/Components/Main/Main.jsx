@@ -15,11 +15,8 @@ const Main = () => {
         </div>
       </div>
       <Link to="/game">
-        <button type="button" class="btn btn-danger game">Danger</button>
+        <button type="button" class="btn btn-danger game">Начать игру!</button>
       </Link>
-      <div>
-        dasdsdaddddddddddd
-      </div>
     </div>
   );
 }

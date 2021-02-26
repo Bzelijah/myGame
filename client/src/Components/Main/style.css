@@ -10,6 +10,13 @@
 
 .profile {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+
+  flex-direction: column;
+  justify-content: center;
+  align-content: column;
+}
+.card-body{
+    display: flex;
+
+  flex-direction: column;
 }
